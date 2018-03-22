@@ -1,19 +1,33 @@
 import React, { Component } from 'react';
 
 import './App.css';
-import {Header} from "semantic-ui-react";
+import {Header, Container} from "semantic-ui-react";
+
+import TabBarContainer from "./features/TabBarContainer";
 
 
-import SampleComponent from "./SampleComponent";
 
 class App extends Component {
   render() {
+
+
+      const tabs = [
+          {name : "airportInfo", label : "Airport Info"},
+          {name : "pilots", label : "Pilots"},
+          {name : "mechs", label : "Mechs"},
+          {name : "unitOrganization", label : "Unit Organization"}
+      ];
+
+
+
     return (
       <div className="App">
         <header className="App-header">
-            <Header inverted as="h1">Project ReactSample Semantic ORM Demo1234</Header>
+            <Header inverted as="h1"> Semantic ORM Demo: Airport Pilots to Mechs Management</Header>
         </header>
-        <SampleComponent/>
+        <Container>
+            <TabBarContainer tabs={tabs} size="massive"/>
+        </Container>
       </div>
     );
   }
