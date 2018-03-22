@@ -21,7 +21,7 @@ class App extends Component {
   render() {
 
 const tabs = [
-    {name : "unitInfo", label : "Unit Info", component : UnitInfo,},
+    {name : "unitInfo", label : "Airports", component : UnitInfo,},
     {name : "pilots", label : "Pilots", component : Pilots,},
     {name : "mechs", label : "Mechs", component : Mechs,},
     {name : "unitOrganization", label : "Unit Organization", component : UnitOrganization}
